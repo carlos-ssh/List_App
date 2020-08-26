@@ -3,14 +3,14 @@ class Item
 
   def initialize(text="")
     @text = text
-    @checked = checked
+    @checked = false
   end
 
   def to_s
     if @checked
-      "[ X ]" + @text
+      "[ X ] " + @text
     else
-      "[  ]" + @text
+      "[  ] " + @text
     end
   end
 
