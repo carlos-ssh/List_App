@@ -10,7 +10,7 @@ class Item
     if @checked
       "[ X ] " + @text
     else
-      "[  ] " + @text
+      "[   ] " + @text
     end
   end
 

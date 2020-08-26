@@ -16,7 +16,7 @@ class List
     @items.delete_at(index)
   end
 
-  def checked_items(index)
+  def check_item(index)
     @items[index].checked = true
   end
 
@@ -29,7 +29,7 @@ class List
       puts "Your shopping list is empty!"
     else
       @items.each_index do |index|
-        index.to_s + " - " + @items[index].to_s
+        puts index.to_s + " - " + @items[index].to_s
       end
     end
   end
