@@ -1,3 +1,5 @@
+require "./item.rb"
+
 class List
   attr_writer :items
 
@@ -6,8 +8,8 @@ class List
   end
 
   def add_item(text)
-    item = Item.new()
-    items.push(item)
+    item = Item.new(text)
+    @items.push(item)
   end
 
   def delete_item(index)
@@ -20,6 +22,16 @@ class List
 
   def remove_all
     @items.clear
+  end
+
+  def show_all
+    if @items.length == 0
+      puts "Your shopping list is empty!"
+    else
+      @items.each_index do |index|
+        index.to_s + " - " + @items[index].to_s
+      end
+    end
   end
 
 end
